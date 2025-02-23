@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team | CBIT DSC</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+       :root {
+           --primary-color: #00ffab;
+           --bg-dark: #192442;
+           --text-light: #e5e7eb;
+       }
+   /* Body Background */
+   * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body {
+           font-family: 'Space Grotesk', sans-serif;
+           background-color: var(--bg-dark);
+           color: white;
+           line-height: 1.6;
+       }
+   nav ul li a {
+           position: relative;
+           transition: color 0.3s ease;
+           color:#00ffab;
+       }
+       nav ul li a::after {
+           content: '';
+           position: absolute;
+           bottom: -2px;
+           left: 0;
+           width: 0;
+           height: 2px;
+           background-color:white;
+           transition: width 0.3s ease;
+       }
+       nav ul li a:hover::after {
+           width: 100%;
+       }
+       nav ul li a:hover {
+     color: #00ffab;
+     text-shadow: 0px 0px 10px rgba(0, 255, 171, 0.8);
+   }
+   /* Mobile Menu Background */
+   #mobile-menu {
+     background: linear-gradient(135deg, #8553F4, #FB81BE);
+     text-align: center;
+     padding: 1rem 0;
+   }
+
+   @media (min-width: 768px) {
+     nav ul {
+       display: flex;
+       gap: 1.5rem;
+     }
+   }
+   .team-row.single {
+      justify-content: center;
+    }
+
+   /* Team Section Styles */
+   .team {
+     padding: 6rem 1em 3em;
+     text-align: center;
+   }
+
+   .team h1 {
+     font-size: 2.5em;
+     margin-bottom: 2em;
+     font-weight: bold;
+   }
+
+   .team-row {
+ display: flex;
+ justify-content: center; /* Center elements horizontally */
+ gap: 1em;
+ margin-bottom: 2em;
+ flex-wrap: wrap;
+}
+
+.team-member {
+ text-align: center;
+ max-width: 200px;
+ margin: 0 auto; /* Center the whole team member block */
+
+}
+
+.team-member img {
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ object-fit: cover;
+ border: 4px solid #4F76F6;
+ display: block;
+ margin: 0 auto; /* Center image */
+}
+
+.team-member h3{
+  font-size: large;
+  text-align: center;
+  font-weight: bold;
+  color: #00ffab;
+}
+
+.team-member p {
+ text-align: center;
+ font-weight: bold;
+ font-size: x-large;
+
+}
+
+   .particles {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           pointer-events: none;
+           z-index: -1;
+       }
+       .particle {
+           position: absolute;
+           background: var(--primary-color);
+           border-radius: 50%;
+           opacity: 0.3;
+           animation: float 20s infinite linear;
+       }
+       @keyframes float {
+           0% { transform: translateY(0) translateX(0); }
+           100% { transform: translateY(-100vh) translateX(100vw); }
+       }
+ </style>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white">
+  <div class="particles" id="particles"></div>
+    <!-- Navbar -->
+    <header class="bg-transparent fixed w-full z-50">
+        <nav class="flex items-center justify-between px-8 py-4">
+          <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-teal-400 text-transparent bg-clip-text">CBIT DSC </a>
+            <ul class="hidden md:flex text-lg md:space-x-6 lg:space-x-8 xl:space-x-10">
+                <li><a href="index.html" class="hover:text-gren-400 text-green-400">Home</a></li>
+                <li><a href="projects.html" class=" hover:text-blue-400 text-blue-400">Projects</a></li>
+                <li><a href="team.html" class="hover:text-yellow-400 text-yellow-400">Team</a></li>
+                <li><a href="Contact.html" class="hover:text-orange-400 text-orange-400">Contact</a></li>
+            </ul>
+            <button id="menu-btn" class="md:hidden block text-2xl text-gray-400">&#9776;</button>
+        <ul id="mobile-menu" class="hidden bg-gray-700 w-full text-center space-y-4 py-4 md:hidden">
+            class="hidden md:flex text-lg md:space-x-6 lg:space-x-8 xl:space-x-10">
+                <li><a href="index.html" class="hover:text-green-400 text-green-400">Home</a></li>
+                <li><a href="projects.html" class=" hover:text-blue-400 text-blue-400">Projects</a></li>
+                <li><a href="team.html" class="hover:text-yellow-400 text-yellow-400">Team</a></li>
+                <li><a href="Contact.html" class="hover:text-orange-400 text-orange-400">Contact</a></li>
+        </ul></nav>
+  </header>  <!-- Team Section -->
+  <section class="team">
+    <h1 style="color: #00ffab;">CBIT DSC Team 2024-25</h1>
+
+        <!-- Row 1: President -->
+        <div style="display: flex; margin: 0 400px;">
+          <div class="team-member ">
+            <img src="images/Yash.jpg" alt="President">
+            <h3>President</h3>
+            <p>Yash T.</p>
+          </div>
+          <div class="team-member text-center">
+            <img src="images/Aryaman Gajrani (Vice-President).jpg" alt="President">
+            <h3>Vice-President</h3>
+            <p>Aryaman G.</p>
+          </div>
+        </div><br>
+    
+        <!-- Row 2: Advisor & General Secretary -->
+        <div style="display: flex; margin: 0 400px;">
+          <div class="team-member ">
+            <img src="images/karthikeya.png" alt="Advisor">
+            <h3>Advisor</h3>
+            <p>Karthikeya B.</p>
+          </div>
+          <div class="team-member text-center">
+            <img src="images/seema.jpg" alt="General Secretary">
+            <h3>General Secretary</h3>
+            <p>Seema</p>
+          </div>
+        </div>
+    
+         <!-- Tech & Non-Tech Heads -->
+        <div class="team-row grid grid-cols-2 gap-6 mt-6">
+            <div class="team-member text-center">
+              <img src="images/karthikeya.png" alt="Advisor">
+              <h3>Technical Head</h3>
+              <p>Karthikeya B.</p>
+            </div>
+            <div class="team-member text-center">
+              <img src="images/Varshith Non-Tech Head.jpg" alt="General Secretary">
+              <h3>Non-Technical Head</h3>
+              <p>G Varshith Reddy</p>
+            </div>
+          </div>
+    
+          <!-- Leads -->
+          <div class="team-row grid grid-cols-5 gap-6 mt-6">
+            <div class="team-member text-center">
+              <img src="images/Gayatri Naga Soujanya.jpg" alt="Advisor">
+              <h3>AI/ML Lead</h3>
+              <p>P. Gayatri Naga Soujanya</p>
+            </div>
+            <div class="team-member text-center">
+                <img src="images\Ch.Rushikesh" alt="Advisor">
+                <h3>Competitive Coding Lead</h3>
+                <p>Rushikesh Ch.</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images\Abhiram.jpg" alt="Advisor">
+                <h3>Web-Dev Lead</h3>
+                <p>K. Abhiram Goud</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images\Tejasree Jilla .jpg" alt="Advisor">
+                <h3>Design Lead</h3>
+                <p>Tejasree J.</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images\Greeshma Bannaie.jpg" alt="Advisor">
+                <h3>Public Relation Lead</h3>
+                <p>B. Greeshma</p>
+              </div>
+          </div>
+        
+        <!-- Co-Leads -->
+        <div class="team-row grid grid-cols-5 gap-6 mt-6">
+            <div class="team-member text-center">
+              <img src="images\Shaik Abdullah.jpg" alt="Advisor">
+              <h3>AI/ML Co-Lead</h3>
+              <p>Shaik Abdullah</p>
+            </div>
+            <div class="team-member text-center">
+                <img src="images\salman.jpg" alt="Advisor">
+                <h3>Competitive Coding <br>Co-Lead</h3>
+                <p>MD Salman</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images\Nitheesha.jpg" alt="Advisor">
+                <h3>Web-Dev Co-Lead</h3>
+                <p>Nitheesha Patel</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images\Shiva pratheek.jpg" alt="Advisor">
+                <h3>Design Co-Lead</h3>
+                <p>Shiva Pratheek</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images\Krish Ramoju.png" alt="Advisor">
+                <h3>Public Relation Co-Lead</h3>
+                <p>Krish Ramoju</p>
+              </div>
+          </div>
+    
+        <!-- Members -->
+        <div class="team-row grid grid-cols-5 gap-6 mt-6">
+            <div class="team-member text-center">
+              <img src="images/Sakshi B joshi .jpg" alt="Advisor">
+              <p>Sakshi Joshi</p><br>
+              <img src="images/Nithya.jpg" alt="Advisor">
+              <p>Sri Nithya J.</p><br>
+              <img src="images/Anushka.png" alt="Advisor">
+              <p>Anushka P.</p><br>
+              <img src="images/CHILUKURI LAXMI PRASHASTHI .jpg" alt="Advisor">
+              <p>Ch. Laxmi Prashasthi</p><br>
+              <img src="images/Shashank.jpg" alt="Advisor">
+              <p>K. Venkata Shashank Yadav</p><br>
+              <img src="images/Pavan Kumar.jpg" alt="Advisor">
+              <p>Pavan Kumar G.</p>
+            </div>
+            <div class="team-member text-center">
+                <img src="images/Keerthi Reddy Gangu .png" alt="Advisor">
+                <p>Keerthy Reddy G.</p><br>
+                <img src="images/B Kaushik .png" alt="Advisor">
+                <p>B. Kaushik</p><br>
+                <img src="images/Anishi.jpg" alt="Advisor">
+                <p>Anishi B.</p><br>
+                <img src="images/Mani Varsha .jpg" alt="Advisor">
+                <p>G. Mani Varsha</p><br>
+                <img src="images/CH Viswanath Anand.jpg" alt="Advisor">
+                <p>CH Viswanath Anand</p><br>
+                <img src="images/Amol_Pathak.jpeg" alt="Advisor">
+                <p>Amol Pathak</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images/Amukta Yajamanyam.png" alt="Advisor">
+                <p>Amukta Y.</p><br>
+                <img src="images/Ashwith Godishala.jpg" alt="Advisor">
+                <p>G. Ashwith</p><br>
+                <img src="images/A Suraj Reddy.jpg" alt="Advisor">
+                <p>A. Suraj Reddy</p><br>
+                <img src="images/sai sushanth.jpg" alt="Advisor">
+                <p>M. Sai Sushanth</p><br>
+                <img src="images/Shravya Jallepally.jpg" alt="Advisor">
+                <p>Shravya J.</p><br>
+                <img src="images/Mohammed Muqeet Us Salam.jpeg" alt="Advisor">
+                <p>Muhammed Muqeet</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images/Sahasra Lakshmi.jpg" alt="Advisor">
+                <p>Sahasra Lakshmi</p><br>
+                <img src="images/Bhavana.png" alt="Advisor">
+                <p>Bhavana Ramakrishna</p><br>
+                <img src="images/M.Satvik Reddy .jpg" alt="Advisor">
+                <p>M. Satvik Reddy</p><br>
+                <img src="images/J Hasini.jpg" alt="Advisor">
+                <p>J. Hasini</p>
+              </div>
+              <div class="team-member text-center">
+                <img src="images/Preethi Madhavan.jpg" alt="Advisor">
+                <p>Preethi Madhavan</p><br>
+                <img src="images/Srinitya Manukonda.jpg" alt="Advisor">
+                <p>Srinitya M.</p><br>
+                <img src="images/Prem Uttej.jpg" alt="Advisor">
+                <p>Prem Uttej</p><br>
+                <img src="images/Shivanand.png" alt="Advisor">
+                <p>Shivanand</p><br>
+                <img src="images/Prashanthi Somaraju.jpg" alt="Advisor">
+                <p>Prashanthi Somaraju</p>
+              </div>
+          </div>
+  </section>
+  <footer class="bg-grey-900 py-8 text-center mt-20">
+    <p style="color: white;">
+        &copy; 2025 CBIT Developer Student Club. All Rights Reserved.
+        <a href="#" class="text-blue-400 hover:text-blue-300 ml-2">Privacy Policy</a>
+    </p>
+</footer>
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+  });
+  // Header scroll effect
+  window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+  // Stats counter animation
+  const counters = document.querySelectorAll('.stat-counter');
+  counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 2000; // 2 seconds
+      const step = target / (duration / 16); // 60fps
+      let current = 0;
+      const updateCounter = () => {
+          current += step;
+          if (current < target) {
+              counter.textContent = Math.round(current);
+              requestAnimationFrame(updateCounter);
+          } else {
+              counter.textContent = target;
+          }
+      };
+      updateCounter();
+  });
+  // Particles background effect
+  function createParticles() {
+      const particles = document.getElementById('particles');
+      const numberOfParticles = 50;
+      for (let i = 0; i < numberOfParticles; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          // Random size between 2-6px
+          const size = Math.random() * 4 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          // Random position
+          particle.style.left = `${Math.random() * 100}vw`;
+          particle.style.top = `${Math.random() * 100}vh`;
+          // Random animation duration
+          particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+          particles.appendChild(particle);
+      }
+  }
+  createParticles();
+</script>
+</body>
+</html>
